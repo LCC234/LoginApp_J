@@ -38,8 +38,8 @@ public class AppUser implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
-    private Boolean locked;
-    private Boolean enabled;
+    private Boolean locked = false;
+    private Boolean enabled = false;
 
     public AppUser(String firstName,
                    String lastName,
@@ -74,6 +74,10 @@ public class AppUser implements UserDetails {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getLastName() {
