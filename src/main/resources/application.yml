@@ -3,18 +3,18 @@ server:
   error:
     include-message: always
     include-binding-errors: always
-
+  port: 8010
 spring:
   datasource:
-    password: password
-    url: jdbc:postgresql://localhost:5432/registration
-    username: postgres
+    password: pass
+    url: jdbc:h2:mem:testdb
+    username: user
   jpa:
     hibernate:
       ddl-auto: create-drop
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
     show-sql: true
 

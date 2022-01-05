@@ -4,8 +4,8 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head >
     <title>Portal Access</title>
-    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
-    <link href="CSS/Custom.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -44,13 +44,13 @@
                     <div sec:authorize="hasAuthority('ADMIN')" class="form-group Align-center ">
                         <h5 class="Align-center ">Secret Page Access</h5>
 
-                        <button type="button" id="AccessSecret" class="btn btn-dark ">Secret Access sdfdsfsfs<i class="fas fa-key"></i></button>
+                        <button type="button" id="AccessSecret" class="btn btn-dark ">Secret Access<i class="fas fa-key"></i></button>
                     </div>
 
 
-<!--                <form th:action="@{/Logout}" method="post" class="form-group float-right">-->
-<!--                    <input type="submit" value="Sign Out"/>-->
-<!--                </form>-->
+                <form th:action="@{/logout}" method="post" class="form-group float-right">
+                    <input class="btn btn-info" type="submit" value="Sign Out"/>
+                </form>
             </div>
         </div>
     </div>

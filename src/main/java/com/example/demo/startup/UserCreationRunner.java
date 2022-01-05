@@ -20,10 +20,10 @@ public class UserCreationRunner {
     public void createUserOnStartup(){
 
         AppUser user1 = new AppUser();
-        user1.setEmail("kai@mail.com");
-        user1.setPassword("kai");
-        user1.setFirstName("kk");
-        user1.setLastName("ww");
+        user1.setEmail("user");
+        user1.setPassword("user");
+        user1.setFirstName("panda");
+        user1.setLastName("panda");
         user1.setAppUserRoleEnum( AppUserRoleEnum.USER);
 
         appUserService.signUpUser(user1);
@@ -31,10 +31,10 @@ public class UserCreationRunner {
 
 
         AppUser user2 = new AppUser();
-        user2.setEmail("cc@mail.com");
-        user2.setPassword("cc");
-        user2.setFirstName("cc");
-        user2.setLastName("dd");
+        user2.setEmail("admin");
+        user2.setPassword("admin");
+        user2.setFirstName("bear");
+        user2.setLastName("bear");
         user2.setAppUserRoleEnum( AppUserRoleEnum.ADMIN);
 
         appUserService.signUpUser(user2);

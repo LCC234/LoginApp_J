@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head >
     <title>Portal Access</title>
-    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
-    <link href="CSS/Custom.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -23,10 +23,9 @@
             <div class="row d-flex align-items-center justify-content-center text-center">
 
                 <div class="col-5 text-center align-items-center" style="padding: 100px;">
-						<button type="button" id="btn_logout" class="btn btn-info" style="height: 80px;width: 300px;font-size: 25px;">
-						Back to Login <i class="fas fa-user"></i></button>
-
-                    
+                    <form th:action="@{/login}" method="get" class="form-group float-right">
+                        <input class="btn btn-info" type="submit" value="Back to Login"/>
+                    </form>
                 </div>
             </div>
         </div>
